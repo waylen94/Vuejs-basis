@@ -10,6 +10,11 @@ import './components' // ./components/index.js
 // 引入 store/index.js 的默认值
 import store from './store'
 
+import VueSweetalert2 from './plugins/vue-sweetalert2'
+
+// 使用插件
+Vue.use(VueSweetalert2)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

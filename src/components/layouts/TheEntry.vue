@@ -1,7 +1,34 @@
 <template>
   <div class="navbar-right">
-    <div class="nav navbar-nav github-login">
-      <a href="#" class="btn btn-default login-btn">
+
+    <ul v-if="auth" class="nav navbar-nav github-login">
+          <li>
+         <!--    <a href="javascript:;">
+              <span v-if="user">
+                <img v-if="user.avatar" :src="user.avatar" class="avatar-topnav">
+                <span v-if="user.name">{{ user.name }}</span>
+              </span>
+              <span v-else>佚名</span>
+              <span class="caret"></span>
+            </a> -->
+            <a v-dropdown href="javascript:;">
+                <span v-if="user">
+                  <img v-if="user.avatar" :src="user.avatar" class="avatar-topnav">
+                  <span v-if="user.name">{{ user.name }}</span>
+                </span>
+                <span v-else>佚名</span>
+                <span class="caret"></span>
+              </a>
+
+
+            <ul class="dropdown-menu">
+              <li><a href="javascript:;" @click="logout"><i class="fa fa-sign-out text-md"></i>退出</a></li>
+            </ul>
+          </li>
+        </ul>
+
+    <div v-else  class="nav navbar-nav github-login">
+      <a href="/auth/login" class="btn btn-default login-btn">
         <i class="fa fa-user"></i> 登 录
       </a>
       <router-link to="/auth/register" class="btn btn-default login-btn">
@@ -12,8 +39,32 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
+
 export default {
-  name: 'TheEntry'
+  name: 'TheEntry',
+
+  computed: {
+    ...mapState([
+      'auth',
+      'user'
+    ])
+  },
+
+  // 添加 methods 选项，并添加 logout 方法
+  methods: {
+    logout() {
+      // this.$store.dispatch('logout')
+      this.$swal({
+        text: '你确定要退出吗?',
+        confirmButtonText: '退出'
+      }).then((res) => {
+        if (res.value) {
+          this.$store.dispatch('logout')
+        }
+      })
+    }
+  }
 }
 </script>
 
