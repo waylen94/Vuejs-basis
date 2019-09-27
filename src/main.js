@@ -5,12 +5,19 @@ import App from './App'
 import router from './router/index.js'
 import './directives/index.js'
 
+import './components' // ./components/index.js
+
+// 引入 store/index.js 的默认值
+import store from './store'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  // 注入 store
+  store,
   components: { App },
   template: '<App/>'
 })
