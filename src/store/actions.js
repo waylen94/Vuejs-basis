@@ -24,10 +24,10 @@ export const post = ({ commit, state }, { article, articleId }) => {
           // 将当前 articleId 在最后一篇文章的 articleId 基础上加 1
         articleId = parseInt(lastArticle.articleId) + 1
       } else {
-         // 将当前 articleId 在文章长度基础上加 1
+        //  // 将当前 articleId 在文章长度基础上加 1
         articleId = articles.length + 1
       }
-// 将当前文章添加到所有文章
+      // 将当前文章添加到所有文章
       articles.push({
         uid,
         articleId,
@@ -35,11 +35,39 @@ export const post = ({ commit, state }, { article, articleId }) => {
         content,
         date
       })
-    }
+    }else{
+         // 如果有传 articleId
+
+            // 遍历所有文章
+            for (let article of articles) {
+              // 找到与 articleId 对应的文章
+              if (parseInt(article.articleId) === parseInt(articleId)) {
+                // 更新文章的标题
+                article.title = title
+                // 更新文章的内容
+                article.content = content
+                break
+              }
+            }
+      }
+
 // 更新所有文章
     commit('UPDATE_ARTICLES', articles)
      // 跳转到首页，并附带 articleId 和 showMsg 参数，showMsg 用来指示目标页面显示一个提示，我们稍后添加相关逻辑
     // router.push({ name: 'Home', params: { articleId, showMsg: true } })
     router.push({ name: 'Content', params: { articleId, showMsg: true } })
+  }else {
+    for (let article of articles) {
+      if (parseInt(article.articleId) === parseInt(articleId)) {
+        // 删除对应的文章
+        articles.splice(articles.indexOf(article), 1)
+        break
+      }
+    }
+// 更新文章列表
+    commit('UPDATE_ARTICLES', articles)
+      // 跳转到首页，附带 showMsg 参数，以指示首页显示一个消息提示
+    router.push({ name: 'Home', params: { showMsg: true } })
   }
 }
+
