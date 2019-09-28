@@ -9,10 +9,10 @@ export default [
     name: 'Home',
     component: () => import('@/views/Home')
   },
-  // {
-  //   path: '*',
-  //   redirect: '/'
-  // },
+  {
+    path: '*',
+    redirect: '/'
+  },
   {
     path: '/auth/login',
     name: 'Login',

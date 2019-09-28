@@ -3,13 +3,16 @@ import Vuex from 'vuex'
 import ls from '../utils/localStorage'
 import router from '../router'
 
+
 Vue.use(Vuex)
+
 
 const state = {
   user: ls.getItem('user'),
   // 添加 auth 来保存当前用户的登录状态
   auth: ls.getItem('auth')
 }
+
 
 const mutations = {
   UPDATE_USER(state, user) {

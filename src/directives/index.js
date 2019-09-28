@@ -10,5 +10,7 @@ const directives = {
 }
 
 for (const [key, value] of Object.entries(directives)) {
+
   Vue.directive(key, value)
+
 }
