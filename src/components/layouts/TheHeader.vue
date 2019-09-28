@@ -24,10 +24,10 @@
 
 
 
-         <!-- 入口组件 -->
-          <div class="navbar-right">
-          <TheEntry/>
-        </div>
+             <!-- 入口组件 -->
+              <div class="navbar-right">
+              <TheEntry/>
+            </div>
       </div>
     </div>
   </div>
