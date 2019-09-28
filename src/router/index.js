@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// 引入 ./routes.js 的默认值
-import routes from './routes'
 
 
 Vue.use(Router)
+// 引入 ./routes.js 的默认值
+import routes from './routes'
+
 
 const router = new Router({
   mode: 'history',
