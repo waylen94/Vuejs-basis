@@ -15,10 +15,12 @@ const state = {
 
 
 const mutations = {
+
   UPDATE_USER(state, user) {
       state.user = user
       ls.setItem('user', user)
     },
+
     // 添加 UPDATE_AUTH 来更改当前用户的登录状态
     UPDATE_AUTH(state, auth) {
       state.auth = auth
@@ -27,8 +29,10 @@ const mutations = {
 }
 
 const actions = {
+
   login({ commit }, user) {
     if (user) commit('UPDATE_USER', user)
+
     // 更新当前用户的登录状态为已登录
     commit('UPDATE_AUTH', true)
     router.push('/')
@@ -37,6 +41,7 @@ const actions = {
     commit('UPDATE_AUTH', false)
     router.push({ name: 'Home', params: { logout: true } })
   }
+
 }
 
 
