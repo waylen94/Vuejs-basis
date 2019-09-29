@@ -23,7 +23,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 
-#Vue – File structure
+# Vue – File structure
 
     Build config
     index.html
