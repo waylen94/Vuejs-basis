@@ -44,16 +44,24 @@ static
 
 # Knowledge points
 1.  Vue-cli build project framework
-[ ] Task
+
+- [ ] Task
 
 2.  Bootstrap-sass font-awesome
+
 [ ] Task
+
 3.  Component concept
+
 [ ] Task
+
 4.  Mustache + v-bind
+
 [ ] Task
+
 5.  V-for render list
 [ ] Task
+
 6.  Class style bonding
 [ ] Task
 7.  V-on monitor dom
