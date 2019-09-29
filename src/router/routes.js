@@ -8,6 +8,7 @@ export default [
   {
     path: '/',
     name: 'Home',
+    alias: '/topics',
     component: () => import('@/views/Home')
   },
   // 其他未配置的路由都跳转到首页
@@ -58,11 +59,11 @@ export default [
     meta: { auth: true }
   },
   // Content
-  {
-    path: '/articles/:articleId/content',
-    name: 'Content',
-    component: () => import('@/views/articles/Content.vue')
-  },
+  // {
+  //   path: '/articles/:articleId/content',
+  //   name: 'Content',
+  //   component: () => import('@/views/articles/Content.vue')
+  // },
 
    // Edit
   {
@@ -71,4 +72,29 @@ export default [
     component: () => import('@/views/articles/Create'),
     meta: { auth: true }
   },
+
+// Column
+  // {
+  //   path: '/:user',
+  //   name: 'Column',
+  //   component: () => import('@/views/articles/Column')
+  // },
+
+{
+  path: '/:user',
+  component: () => import('@/views/articles/Column'),
+  children: [
+    {
+      path: '',
+      name: 'Column',
+      component: () => import('@/views/articles/List.vue')
+    },
+    {
+      path: '/articles/:articleId/content',
+      name: 'Content',
+      component: () => import('@/views/articles/Content.vue')
+    }
+  ]
+},
+
 ]
