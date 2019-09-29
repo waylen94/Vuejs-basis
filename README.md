@@ -48,80 +48,78 @@ static
 - [ ] Task
 
 2.  Bootstrap-sass font-awesome
-
-[ ] Task
-
+- [ ] Task
 3.  Component concept
 
-[ ] Task
+- [ ] Task
 
 4.  Mustache + v-bind
 
-[ ] Task
+- [ ] Task
 
 5.  V-for render list
-[ ] Task
+- [ ] Task
 
 6.  Class style bonding
-[ ] Task
+- [ ] Task
 7.  V-on monitor dom
-[ ] Task
+- [ ] Task
 8.  Custom instruction - title validator dropdown
-[ ] Task
+- [ ] Task
 9.  Vue-router single page application
-[ ] Task
+- [ ] Task
 10. Custom functions - message modal pagination slider
-[ ] Task
+- [ ] Task
 11. Components props
-[ ] Task
+- [ ] Task
 12. Watch in component
-[ ] Task
+- [ ] Task
 13. Vues manage state
-[ ] Task
+- [ ] Task
 14. Compute section
-[ ] Task
+- [ ] Task
 15. Global locl register components instruction filter
-[ ] Task
+- [ ] Task
 16. V-if condition
-[ ] Task
+- [ ] Task
 17. Custom plugin – message + vue-sweetalert2
-[ ] Task
+- [ ] Task
 18. List render key
-[ ] Task
+- [ ] Task
 19. Route – child attribute
-[ ] Task
+- [ ] Task
 20. Checkbox v –model
-[ ] Task
+- [ ] Task
 21. V-model .trim .lazy
-[ ] Task
+- [ ] Task
 22. SimpleMDE editor
-[ ] Task
+- [ ] Task
 23. Routeobjects before parameter to from
-[ ] Task
+- [ ] Task
 24. Dynamic parameters :/
-[ ] Task
+- [ ] Task
 25. Getters obtain fresh states
-[ ] Task
+- [ ] Task
 26. Filter moment
-[ ] Task
+- [ ] Task
 27. Router.beforeEach afterEach beforeRouteEnter beforeRoureLeave
-[ ] Task
+- [ ] Task
 28. Event .self
-[ ] Task
+- [ ] Task
 29. Slot display content
-[ ] Task
+- [ ] Task
 30. Transition animation
-[ ] Task
+- [ ] Task
 31. Transition group
-[ ] Task
+- [ ] Task
 32. Mock.js simulation data
-[ ] Task
+- [ ] Task
 33. Key for reuse content
-[ ] Task
+- [ ] Task
 34. Axios AJAX request
-[ ] Task
+- [ ] Task
 35. Key monitor .enter
-[ ] Task
+- [ ] Task
 36. Compute attribute for setter
-[ ] Task
+- [ ] Task
 
