@@ -25,21 +25,21 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 #Vue – File structure
 
-Build config
-index.html
-node_modules
-package.json
-readme.md
-src
-src/app.vue
-src/assets
-src/components
-src/main.js
-static
-.babelrc
-.editorconfig
-.gitignore
-.postcssrc.js
+    Build config
+    index.html
+    node_modules
+    package.json
+    readme.md
+    src
+    src/app.vue
+    src/assets
+    src/components
+    src/main.js
+    static
+    .babelrc
+    .editorconfig
+    .gitignore
+    .postcssrc.js
 
 
 # Knowledge points
