@@ -11,7 +11,7 @@
 
        <router-link to="/" class="navbar-brand">
              <span class="title">{{ logo.title }}</span>
-              <img :src="logo.src" :alt="logo.title">
+              <img v-bind:src="logo.src" :alt="logo.title">
         </router-link>
       </div>
 
@@ -57,7 +57,7 @@ export default {
   data() {
     return {
       logo: {
-        src: `${this.uploadsUrl}sites/ByvFbNlQYVwhvTyBgLdqitchoacDNznN.jpg`,
+        src: `${this.uploadsUrl}banners/bQawWl3vT5dc2lYx5JZ7.png`,
         title: 'VuejsCaff'
       },
       navList: ['社区', '头条', '问答', '教程'],
