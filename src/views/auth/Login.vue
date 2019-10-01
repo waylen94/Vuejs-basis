@@ -5,21 +5,21 @@
 
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">请登录</h3>
+          <h3 class="panel-title">Login</h3>
         </div>
 
         <div class="panel-body" data-validator-form>
           <div class="form-group">
-            <label class="control-label">用户名</label>
-            <input v-model.trim="username" v-validator.required="{ title: '用户名' }" type="text" class="form-control" placeholder="请填写用户名">
+            <label class="control-label">Username</label>
+            <input v-model.trim="username" v-validator.required="{ title: '用户名' }" type="text" class="form-control" placeholder="Please filling username">
           </div>
           <div class="form-group">
-            <label class="control-label">密码</label>
-            <input v-model.trim="password" id="password" v-validator.required="{ title: '密码' }" type="password" class="form-control" placeholder="请填写密码">
+            <label class="control-label">Password</label>
+            <input v-model.trim="password" id="password" v-validator.required="{ title: '密码' }" type="password" class="form-control" placeholder="Please filling password">
           </div>
           <br>
           <button @click="login" type="submit" class="btn btn-lg btn-success btn-block">
-            <i class="fa fa-btn fa-sign-in"></i> 登录
+            <i class="fa fa-btn fa-sign-in"></i> Login
           </button>
         </div>
       </div>

@@ -8,37 +8,39 @@
       <div class="panel panel-default">
 
         <div class="panel-heading">
-          <h3 class="panel-title">请注册</h3>
+          <h3 class="panel-title">Please Login</h3>
         </div>
 
                 <div class="panel-body" data-validator-form>
 
                   <div class="form-group">
-                    <label class="control-label">用户名</label>
-                     <input v-model.trim="username" v-validator:input.required="{ regex: /^[a-zA-Z]+\w*\s?\w*$/, error: '用户名要求以字母开头的单词字符' }" type="text" class="form-control" placeholder="请填写用户名">
+                    <label class="control-label">User Name</label>
+                     <input v-model.trim="username" v-validator:input.required="{ regex: /^[a-zA-Z]+\w*\s?\w*$/, error: '用户名要求以字母开头的单词字符' }" type="text" class="form-control" placeholder="Filling Username">
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label">密码</label>
-                    <input id="password" v-model.trim="password" v-validator.required="{ regex: /^\w{6,16}$/, error: '密码要求 6 ~ 16 个单词字符' }" type="password" class="form-control" placeholder="请填写密码">
+                    <label class="control-label">Password</label>
+                    <input id="password" v-model.trim="password" v-validator.required="{ regex: /^\w{6,16}$/, error: '密码要求 6 ~ 16 个单词字符' }" type="password" class="form-control" placeholder="Filling Password">
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label">确认密码</label>
-                     <input v-model.trim="cpassword" v-validator.required="{ target: '#password' }" type="password" class="form-control" placeholder="请填写确认密码">
+                    <label class="control-label">Password Confirmation</label>
+                     <input v-model.trim="cpassword" v-validator.required="{ target: '#password' }" type="password" class="form-control" placeholder="Password again">
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label">图片验证码</label>
-                   <input v-model.trim="captcha" v-validator.required="{ title: '图片验证码' }" type="text" class="form-control" placeholder="请填写验证码">
+                    <label class="control-label">Captcha</label>
+                   <input v-model.trim="captcha" v-validator.required="{ title: 'Captcha' }" type="text" class="form-control" placeholder="Please Fill Captcha">
                   </div>
 
-                          <div class="thumbnail" title="点击图片重新获取验证码" @click="getCaptcha">
+                          <div class="thumbnail" title="Click obtaining new one" @click="getCaptcha">
                            <div class="captcha vcenter" v-html="captchaTpl"></div>
                             </div>
-                  <button type="submit" class="btn btn-lg btn-success btn-block"  @click="register">
-                    <i class="fa fa-btn fa-sign-in"></i> 注册
+                            <span @click="register">
+                  <button type="submit" class="btn btn-lg btn-success btn-block">
+                    <i class="fa fa-btn fa-sign-in"></i> Register
                   </button>
+                </span>
                 </div>
 
 
@@ -92,7 +94,7 @@ export default {
     submit() {
       if (this.captcha.toUpperCase() !== this.localCaptcha) {
         // alert('验证码不正确')
-        this.showMsg('验证码不正确')
+        this.showMsg('Password is undefined')
         this.getCaptcha()
       }
       else {
@@ -107,7 +109,7 @@ export default {
         if (localUser) {
           if (localUser.name === user.name) {
             // alert('用户名已存在')
-            this.showMsg('用户名已存在')
+            this.showMsg('User name is existed')
           } else {
             this.login(user)
           }

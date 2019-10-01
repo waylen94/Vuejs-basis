@@ -13,6 +13,7 @@
              <span class="title">{{ logo.title }}</span>
               <img v-bind:src="logo.src" :alt="logo.title">
         </router-link>
+
       </div>
 
       <div id="top-navbar-collapse" :class="['collapse', 'navbar-collapse', { in: showCollapsedNav }]">
@@ -21,15 +22,14 @@
             <a href="#" @click="changeNavIndex(index)">{{ item }}</a>
           </li>
         </ul>
-
-
-
-             <!-- 入口组件 -->
+            <!-- 入口组件 -->
               <div class="navbar-right">
 
                 <!-- 搜索框 -->
               <SearchInput/>
+              <!-- login and register-->
               <TheEntry/>
+
             </div>
       </div>
     </div>
@@ -60,7 +60,7 @@ export default {
         src: `${this.uploadsUrl}banners/bQawWl3vT5dc2lYx5JZ7.png`,
         title: 'VuejsCaff'
       },
-      navList: ['社区', '头条', '问答', '教程'],
+      navList: ['Community', 'Headline', 'Q&&A', 'Course'],
       activeNavIndex: 0,
       showCollapsedNav: false
     }

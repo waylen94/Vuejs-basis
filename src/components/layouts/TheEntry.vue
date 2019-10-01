@@ -57,11 +57,11 @@
       <div v-else  class="nav navbar-nav github-login">
 
         <router-link to="/auth/login" class="btn btn-default login-btn">
-          <i class="fa fa-user"></i> 登 录
+          <i class="fa fa-user"></i> Login
        </router-link>
 
         <router-link to="/auth/register" class="btn btn-default login-btn">
-            <i class="fa fa-user-plus"></i> 注 册
+            <i class="fa fa-user-plus"></i> Register
         </router-link>
 
       </div>
@@ -87,8 +87,8 @@ export default {
     logout() {
       // this.$store.dispatch('logout')
       this.$swal({
-        text: '你确定要退出吗?',
-        confirmButtonText: '退出'
+        text: 'Do you click logout?',
+        confirmButtonText: 'OK'
       }).then((res) => {
         if (res.value) {
           this.$store.dispatch('logout')
