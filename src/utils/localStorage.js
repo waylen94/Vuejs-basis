@@ -1,6 +1,8 @@
+
 const ls = localStorage
 
 export default {
+
   setItem(name, value) {
     ls.setItem(name, JSON.stringify(value))
   },
@@ -14,4 +16,5 @@ export default {
   removeItem(name) {
     ls.removeItem(name)
   }
+
 }

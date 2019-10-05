@@ -2,14 +2,11 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import ls from '../utils/localStorage'
 import router from '../router'
-
 // 引入 actions.js 的所有导出
 import * as moreActions from './actions'
-
 import * as moreGetters from './getters'
 
 Vue.use(Vuex)
-
 
 const state = {
   user: ls.getItem('user'),
@@ -31,7 +28,6 @@ const mutations = {
       state.user = user
       ls.setItem('user', user)
     },
-
     // 添加 UPDATE_AUTH 来更改当前用户的登录状态
   UPDATE_AUTH(state, auth) {
       state.auth = auth
@@ -86,7 +82,7 @@ const getters = {
     // let articles = state.articles
 
     // 使用派生状态 computedArticles 作为所有文章
-    let articles = getters.computedArticle
+    let articles = getters.computedArticles
 
      // 所有文章是一个数组时
     if (Array.isArray(articles)) {
@@ -102,6 +98,8 @@ const getters = {
  // 混入 moreGetters, 你可以理解为 getters = Object.assign(getters, moreGetters)
   ...moreGetters
 }
+
+
 
 
 const store = new Vuex.Store({

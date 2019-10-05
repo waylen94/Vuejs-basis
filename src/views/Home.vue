@@ -15,7 +15,9 @@
       </ul> -->
       <ul class="list-inline topic-filter">
           <li v-for="item in filters">
-            <router-link v-title="item.title" :class="{ active: filter === item.filter }" :to="`/topics?filter=${item.filter}`">{{ item.name }}</router-link>
+            <router-link v-title="item.title" :class="{ active: filter === item.filter }"
+            :to="`/topics?filter=${item.filter}`">{{ item.name }}
+            </router-link>
           </li>
         </ul>
 

@@ -58,7 +58,7 @@
                     <p class="text-md">如果你想学习更多前端的知识，VuejsCaff.com 是个不错的开始</p>
                     <div class="payment-qrcode inline-block">
                       <h5>扫一扫打开 VuejsCaff.com</h5>
-                      <qrcode-vue :value="someUrl" :size="160"></qrcode-vue>
+                      <qrcode-vue value="someUrl" :size="160"></qrcode-vue>
                     </div>
                   </div>
                   <div slot="footer">

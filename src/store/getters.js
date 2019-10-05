@@ -32,7 +32,6 @@ export const computedArticles = (state) => {
       } else {
         addUserInfo.call(article)
       }
-
       // 添加用户信息到评论
       if (Array.isArray(comments)) {
         comments.forEach((comment) => {
@@ -43,7 +42,6 @@ export const computedArticles = (state) => {
           }
         })
       }
-
       // 添加用户信息到点赞
       if (Array.isArray(likeUsers)) {
         likeUsers.forEach((likeUser) => {
@@ -54,6 +52,7 @@ export const computedArticles = (state) => {
           }
         })
       }
+
     })
   }
 

@@ -59,11 +59,11 @@ export default [
     meta: { auth: true }
   },
   // Content
-  // {
-  //   path: '/articles/:articleId/content',
-  //   name: 'Content',
-  //   component: () => import('@/views/articles/Content.vue')
-  // },
+  {
+    path: '/articles/:articleId/content',
+    name: 'Content',
+    component: () => import('@/views/articles/Content.vue')
+  },
 
    // Edit
   {
@@ -103,22 +103,7 @@ export default [
     name: 'Search',
     component: () => import('@/views/Search')
   },
-  {
-    path: '/:user',
-    component: () => import('@/views/articles/Column'),
-    children: [
-      {
-        path: '',
-        name: 'Column',
-        component: () => import('@/views/articles/List.vue')
-      },
-      {
-        path: '/articles/:articleId/content',
-        name: 'Content',
-        component: () => import('@/views/articles/Content.vue')
-      }
-    ]
-  },
+
 
 
 ]

@@ -45,9 +45,12 @@ app.$message.hide()
 
    if (
     (auth && to.path.indexOf('/auth/') !== -1) ||
-    (!auth && to.meta.auth) ||
+
+    (!auth && to.meta.auth)
+    ||
     // 有 articleId 且不能找到与其对应的文章时，跳转到首页
-    (articleId && !store.getters.getArticleById(articleId))||
+    (articleId && !store.getters.getArticleById(articleId))
+    ||
     // 路由参数中的用户不为当前用户，且找不到与其对应的文章时，跳转到首页
     (paramUser && paramUser !== user && !store.getters.getArticlesByUid(null, paramUser).length)
   ) {
